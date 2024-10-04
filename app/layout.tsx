@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${clashDisplay.variable} ${manrope.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${clashDisplay.variable} ${manrope.variable} antialiased scroll-smooth`}
       >
         {children}
       </body>

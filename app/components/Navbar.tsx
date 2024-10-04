@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className='justify-center absolute top-0 inset-x-0 flex px-8 font-[family-name:var(--font-body)] py-4 z-30 text-white'>
+    <nav className='justify-center absolute top-0 inset-x-0 flex px-8 font-[family-name:var(--font-body)] py-4 z-30 text-white border-b border-white/20'>
       <div className='flex w-full max-w-screen-lg justify-between items-center'>
         <a
           href='/'
@@ -25,8 +25,8 @@ const Navbar = () => {
           </li>
         </ul>
         <a
-          className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-primary text-white gap-2 hover:bg-primary text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-          href='#details'
+          className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-black text-white gap-2 hover:bg-white hover:text-black text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
+          href='#register'
         >
           Register now
         </a>

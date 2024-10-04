@@ -16,6 +16,9 @@ const config: Config = {
       },
       backgroundImage: {
         bg: "url('/image/build-along.webp')",
+        ba: "url('/image/ba.webp')",
+        ba2: "url('/image/ba2.webp')",
+        ba3: "url('/image/ba3.webp')",
       },
       keyframes: {
         marquee: {
