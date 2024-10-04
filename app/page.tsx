@@ -1,6 +1,7 @@
 import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
 import Details from "./pageBundles/Details";
+import Facilitators from "./pageBundles/Facilitators";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
             </svg>
             <p>Virtual</p>
           </div>
-          <h1 className='text-3xl sm:text-7xl font-semibold uppercase text-center font-[family-name:var(--font-display)] text-yellow-500/80'>
+          <h1 className='text-3xl sm:text-7xl font-semibold uppercase text-center font-[family-name:var(--font-display)] text-yellow-400/80'>
             #BuildAlong
           </h1>
           <p className='sm:text-lg text-center font-normal'>
@@ -63,6 +64,7 @@ export default function Home() {
         </footer>
       </div>
       <Details />
+      <Facilitators />
     </>
   );
 }
