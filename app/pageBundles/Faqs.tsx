@@ -37,7 +37,7 @@ const Faqs = () => {
   return (
     <section
       id='faqs'
-      className='w-full pt-8 pb-12 md:pt-12 md:pb-20 lg:pt-12 lg:pb-24 px-6 bg-white font-[family-name:var(--font-body)]'
+      className='w-full pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-12 px-6 bg-white font-[family-name:var(--font-body)]'
     >
       <header className='max-w-screen-lg mx-auto mb-6 md:mb-8'>
         <h1 className='text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-display)] uppercase text-yellow-500 mb-4'>

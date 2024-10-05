@@ -1,9 +1,11 @@
+import Footer from "./components/Footer";
 import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
 import Agenda from "./pageBundles/Agenda";
 import Details from "./pageBundles/Details";
 import Facilitators from "./pageBundles/Facilitators";
 import Faqs from "./pageBundles/Faqs";
+import Register from "./pageBundles/Register";
 
 export default function Home() {
   return (
@@ -69,6 +71,8 @@ export default function Home() {
       <Facilitators />
       <Agenda />
       <Faqs />
+      <Register />
+      <Footer />
     </>
   );
 }

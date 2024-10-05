@@ -24,7 +24,7 @@ const Carousel: FC<CarouselProps> = ({ agendas }) => {
           </button>
         ))}
       </nav>
-      <div className='w-[calc(100%) + 80px] overflow-x-hidden relative h-[490px] md:h-80'>
+      <div className='w-[calc(100%) + 80px] overflow-x-hidden relative h-[490px] md:h-80 lg:h-96'>
         {agendas.map(({ week, title, project, image }, index) => (
           <div
             key={index}
