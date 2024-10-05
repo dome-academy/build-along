@@ -61,7 +61,7 @@ export default function Home() {
             items={[
               "Virtual",
               "Web development",
-              "NOV 1 - DEC 15, 2024",
+              "OCT 21 - DEC 15, 2024",
               "8 weeks",
             ]}
           />
