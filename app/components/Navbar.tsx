@@ -19,10 +19,10 @@ const Navbar = () => {
             <a href='#facilitator'>facilitator</a>
           </li>
           <li className='capitalize'>
-            <a href='#'>agenda</a>
+            <a href='#agenda'>agenda</a>
           </li>
           <li className='capitalize'>
-            <a href='#'>faqs</a>
+            <a href='#faqs'>faqs</a>
           </li>
         </ul>
         <a

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Agenda from "./pageBundles/Agenda";
 import Details from "./pageBundles/Details";
 import Facilitators from "./pageBundles/Facilitators";
+import Faqs from "./pageBundles/Faqs";
 
 export default function Home() {
   return (
@@ -67,6 +68,7 @@ export default function Home() {
       <Details />
       <Facilitators />
       <Agenda />
+      <Faqs />
     </>
   );
 }

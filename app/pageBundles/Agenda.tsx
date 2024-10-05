@@ -65,7 +65,7 @@ const agendas = [
 const Agenda = () => {
   return (
     <section
-      id='details'
+      id='agenda'
       className='w-full py-12 md:py-20 lg:py-24 px-6 bg-white text-black font-[family-name:var(--font-body)]'
     >
       <article className='flex flex-col md:flex-row max-w-screen-lg mx-auto gap-6 group'>
@@ -77,6 +77,14 @@ const Agenda = () => {
             We&apos;ve structured the sessions to ensure a seamless learning
             experience, combining theoretical knowledge with hands-on practice.
           </p>
+          <div className='mt-4'>
+            <a
+              className='rounded-full border border-solid border-black transition-colors inline-flex items-center justify-center bg-black text-white gap-2 hover:bg-white hover:text-black text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
+              href='#register'
+            >
+              Register now
+            </a>
+          </div>
         </div>
         <div className='flex-1'>
           <Carousel agendas={agendas} />
