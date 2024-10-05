@@ -58,7 +58,7 @@ const Details = () => {
         </div>
 
         {/* Third Item: Months of learning */}
-        <div className='flex flex-col items-center w-full py-12 bg-ba bg-cover bg-center rounded-xl px-8 gap-y-4 relative overflow-hidde group cursor-pointer'>
+        <div className='flex flex-col items-center w-full py-12 bg-ba bg-cover bg-center rounded-xl px-8 gap-y-4 relative overflow-hidden group cursor-pointer'>
           <div className='absolute inset-0 bg-black/50 z-10 group-hover:bg-black/30 transition-all duration-200' />
           <svg
             xmlns='http://www.w3.org/2000/svg'
