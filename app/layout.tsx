@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "Become an expert in web development before the end of 2024",
     images: ["image/ba-cover.png"],
     siteName: "Dome Academy",
-    url: "https://domeinitiative.com",
+    url: "https://buildalong.domeinitiative.com",
     type: "website",
   },
   twitter: {

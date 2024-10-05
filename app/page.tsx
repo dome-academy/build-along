@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div className='grid grid-rows-[20px_1fr_20px] relative items-center justify-items-center min-h-screen p-8 gap-16 sm:pb-0 font-[family-name:var(--font-body)] bg-bg bg-cover bg-center overflow-x-hidden'>
-        <div className='absolute w-full inset-0 bg-black/40 z-10' />
+        <div className='absolute w-full inset-0 bg-black/55 z-10' />
         <Navbar />
         <header className='flex flex-col gap-8 row-start-2 items-center max-w-3xl text-white z-20'>
           <div className='flex gap-x-6 items-center -my-3 md:text-lg font-bold uppercase'>
