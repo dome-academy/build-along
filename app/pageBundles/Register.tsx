@@ -19,7 +19,7 @@ const Register = () => {
         <div className='mt-4 md:mt-6'>
           <a
             className='rounded-full border border-solid border-transparent transition-colors inline-flex items-center justify-center bg-[#ededed] text-[#0a0a0a] gap-2 hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-            href='#details'
+            href='#tally-open=mO0xE8&tally-overlay=1&tally-emoji-text=👋&tally-emoji-animation=wave'
           >
             Register now
           </a>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -59,6 +60,7 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <Script async src='https://tally.so/widgets/embed.js' />
     </html>
   );
 }
