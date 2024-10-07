@@ -6,7 +6,7 @@ const Details = () => {
       id='details'
       className='w-full py-12 md:py-20 lg:py-24 px-6 bg-white text-black font-[family-name:var(--font-body)]'
     >
-      <p className='text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto md:text-center font-semibold py-8 leading-loose'>
+      <p className='text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto md:text-center font-semibold py-8 leading-loose md:leading-9'>
         #BuildAlong is an 8-week hands-on web development program designed for
         aspiring developers. For just ₦10,000, you’ll receive personalized
         mentorship, work on real-world projects, and master essential web
