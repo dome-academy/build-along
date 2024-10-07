@@ -4,7 +4,7 @@ const faqs = [
   {
     question: "Is the training free?",
     answer:
-      "No, the training requires a fee to participate. However, you will receive a full refund if you complete the program, making it risk-free for those who follow through!",
+      "No, the training requires a fee of ₦10,000 to participate. However, you will receive a full refund if you complete the program, making it risk-free for those who follow through!",
   },
   {
     question: "Do I need a laptop to participate?",

@@ -6,12 +6,14 @@ const Details = () => {
       id='details'
       className='w-full py-12 md:py-20 lg:py-24 px-6 bg-white text-black font-[family-name:var(--font-body)]'
     >
-      <p className='text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto md:text-center font-semibold py-8'>
-        #BuildAlong is an 8-week hands-on training program designed for aspiring
-        web developers eager to gain real-world experience. With personalized
-        mentorship and a collaborative environment, you’ll master the latest
-        techniques and best practices in web development, setting yourself up
-        for success in the field.
+      <p className='text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto md:text-center font-semibold py-8 leading-loose'>
+        #BuildAlong is an 8-week hands-on web development program designed for
+        aspiring developers. For just ₦10,000, you’ll receive personalized
+        mentorship, work on real-world projects, and master essential web
+        development skills.{" "}
+        <span className='bg-yellow-300 p-0.5'>
+          Best part is; you’ll get fully refunded once you complete the program.
+        </span>
       </p>
       <article className='grid gap-6 md:grid-cols-2 max-w-screen-lg mx-auto mt-6 sm:mt-12 text-white'>
         {/* First Item: Real-world projects */}
