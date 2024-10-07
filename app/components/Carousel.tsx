@@ -10,7 +10,7 @@ const Carousel: FC<CarouselProps> = ({ agendas }) => {
   const [activeWeek, setActiveWeek] = useState(1);
   return (
     <>
-      <nav className='w-full flex overflow-x-scroll snap-x snap-mandatory text-[10px] md:text-sm mb-4'>
+      <nav className='w-full flex text-[10px] md:text-sm mb-4'>
         {agendas.map(({ week }) => (
           <button
             key={week}
