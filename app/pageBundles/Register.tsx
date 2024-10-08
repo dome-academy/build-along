@@ -13,7 +13,8 @@ const Register = () => {
           </p>
           <p className='text-blue-100 mt-3'>
             Learn web development in 8 weeks by building alongside a community
-            of learners for a fee of ₦10,000. Register for #BuildAlong now!
+            of learners for a fee of <b>₦10,000</b>. Register for #BuildAlong
+            now!
           </p>
         </div>
         <div className='mt-4 md:mt-6'>

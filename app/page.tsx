@@ -1,3 +1,4 @@
+import CountdownTimer from "./components/CountdownTimer";
 import Footer from "./components/Footer";
 import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
@@ -68,6 +69,7 @@ export default function Home() {
         </footer>
       </div>
       <Details />
+      <CountdownTimer />
       <Facilitators />
       <Agenda />
       <Faqs />
