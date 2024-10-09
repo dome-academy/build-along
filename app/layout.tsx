@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -55,6 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <Analytics />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${clashDisplay.variable} ${manrope.variable} antialiased scroll-smooth`}
       >
