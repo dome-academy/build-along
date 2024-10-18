@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const CountdownTimer: React.FC = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-10-19T23:59:59").getTime(); // Set the target date
+    const targetDate = new Date("2024-10-19T00:00:00").getTime(); // Set the target date
     const currentDate = new Date().getTime();
     const difference = targetDate - currentDate;
 
