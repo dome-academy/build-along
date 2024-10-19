@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { track } from "@vercel/analytics";
+// import { track } from "@vercel/analytics";
 
 const Register = () => {
   return (
@@ -20,13 +20,16 @@ const Register = () => {
           </p>
         </div>
         <div className='mt-4 md:mt-6'>
-          <a
+          <h3 className='text-xl text-center text-white font-[family-name:var(--font-body)] uppercase'>
+            Registration has closed
+          </h3>
+          {/* <a
             onClick={() => track("Click register")}
             className='rounded-full border border-solid border-transparent transition-colors inline-flex items-center justify-center bg-[#ededed] text-[#0a0a0a] gap-2 hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
             href='#tally-open=mO0xE8&tally-overlay=1&tally-emoji-text=👋&tally-emoji-animation=wave'
           >
             Register now
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
