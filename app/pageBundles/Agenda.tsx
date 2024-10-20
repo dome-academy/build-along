@@ -58,7 +58,7 @@ const agendas = [
     title: "Building with External APIs",
     project: "Weather app",
     image:
-      "https://res.cloudinary.com/drltzg1ky/image/upload/v1729448788/dome_academy/BuildAlongs/BUILDALONG-8_wbfduo.png",
+      "https://res.cloudinary.com/drltzg1ky/image/upload/v1729449244/dome_academy/BuildAlongs/BUILDALONG-8_x0ql9b.png",
   },
 ];
 
