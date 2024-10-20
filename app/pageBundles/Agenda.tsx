@@ -51,14 +51,14 @@ const agendas = [
     title: "Working with Lists and Objects",
     project: "Budgeting app",
     image:
-      "https://res.cloudinary.com/drltzg1ky/image/upload/v1716221645/dome_academy/BuildAlongs/1_s2mjwo.png",
+      "https://res.cloudinary.com/drltzg1ky/image/upload/v1729447903/dome_academy/BuildAlongs/BUILDALONG-7_lmd25o.png",
   },
   {
     week: 8,
     title: "Building with External APIs",
     project: "Weather app",
     image:
-      "https://res.cloudinary.com/drltzg1ky/image/upload/v1716221647/dome_academy/BuildAlongs/BUILDALONG-2_rkve6w.png",
+      "https://res.cloudinary.com/drltzg1ky/image/upload/v1729448788/dome_academy/BuildAlongs/BUILDALONG-8_wbfduo.png",
   },
 ];
 
