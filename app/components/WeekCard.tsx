@@ -18,7 +18,7 @@ const WeekCard: FC<WeekCardProps> = ({
 }) => {
   return (
     <a
-      href={isCurrent ? `w/${weekNumber}` : "#"}
+      href={isCurrent ? `/hub/w/${weekNumber}` : "#"}
       className='group relative block h-64 sm:h-80 lg:h-96'
     >
       <span className='absolute inset-0 border-2 border-dashed border-white'></span>
