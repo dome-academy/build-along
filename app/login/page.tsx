@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import React from "react";
 
 const LoginPage = () => {
@@ -9,6 +10,7 @@ const LoginPage = () => {
     const password = formData.get("password");
 
     console.log(email, password);
+    redirect("/hub");
   }
   return (
     <main className='h-dvh w-full bg-neutral-950 flex font-[family-name:var(--font-body)]'>

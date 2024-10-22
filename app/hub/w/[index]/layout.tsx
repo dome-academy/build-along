@@ -11,10 +11,7 @@ const WeekLayout = async ({
   params: { index: number };
 }) => {
   const weekList = await getProjects();
-  console.log("Week page", index);
   const week = weekList.find((w) => w.weekNumber == index);
-
-  console.log(weekList, week, index);
 
   return (
     <main className='grid lg:grid-cols-12 h-[calc(100dvh-56px)]'>
