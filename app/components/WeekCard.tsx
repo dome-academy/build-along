@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 
 export interface WeekCardProps {
+  id: string;
   title: string;
   description: string;
   weekNumber: number;

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function middleware(request: NextRequest) {
   const currentUserId = request.cookies.get("id")?.value;
-  console.log(currentUserId);
+
   if (request.nextUrl.pathname.startsWith("/hub")) {
     if (!currentUserId) {
       return NextResponse.redirect(new URL("/login", request.url));

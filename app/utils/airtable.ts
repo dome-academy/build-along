@@ -16,6 +16,7 @@ export async function getProjects() {
     .select({
       maxRecords: 8,
       fields: [
+        "Id",
         "Index",
         "Name",
         "Description",
@@ -33,6 +34,7 @@ export async function getProjects() {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .sort((a: any, b: any) => a["Index"] - b["Index"])
       .map((m) => ({
+        id: m.Id,
         title: m.Name as string,
         description: m.Description as string,
         weekNumber: m.Index as number,
@@ -85,6 +87,52 @@ export async function getCurrentStudentDetails() {
         id: record.Id,
       };
       return studentData;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+export async function getProjectSubmissionByCurrentStudent(project: number) {
+  const studentId = cookies().get("id")?.value;
+  if (studentId) {
+    try {
+      const records = await mainBase("Project Submissions")
+        .select({ maxRecords: 100, fields: ["Id", "Student", "Project Week"] })
+        .all();
+
+      return records
+        .map((r) => r.fields)
+        .map((r) => ({
+          id: r.Id,
+          student: (r.Student as string[])[0] as string,
+          projectNumber: (r["Project Week"] as any[])[0] as number,
+        }))
+        .find((ps) => ps.projectNumber === project && ps.student === studentId);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+export async function submitWeekProject(
+  projectId: string,
+  projectUrl: string,
+  githubLinK?: string
+) {
+  const studentId = cookies().get("id")?.value;
+  if (studentId) {
+    try {
+      await mainBase("Project Submissions").create([
+        {
+          fields: {
+            "Project URL": projectUrl,
+            "GitHub Link": githubLinK,
+            Student: [studentId],
+            Project: [projectId],
+          },
+        },
+      ]);
     } catch (error) {
       console.log(error);
     }
