@@ -17,7 +17,7 @@ const WeekLayout = async ({
     <main className='grid lg:grid-cols-12 h-[calc(100dvh-56px)]'>
       {week ? (
         <>
-          <section className='h-full relative grid place-items-center lg:col-span-7'>
+          <section className='h-full relative grid place-items-center lg:col-span-7 grid-background'>
             <div className='w-full px-4 sm:px-6 lg:px-8 max-w-screen-sm mx-auto'>
               <Link
                 className='inline-flex items-center gap-x-3 hover:text-yellow-300'

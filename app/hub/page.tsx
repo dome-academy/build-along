@@ -5,7 +5,7 @@ import { getProjects } from "../utils/airtable";
 const HubPage = async () => {
   const fetchWeeks = await getProjects();
   return (
-    <main className='min-h-[calc(100dvh-56px)] bg-neutral-950'>
+    <main className='min-h-[calc(100dvh-56px)] bg-neutral-950 grid-background'>
       <header className='border-b border-neutral-800 bg-neutral-900/20'>
         <div className='mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8'>
           <div className='flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between'>

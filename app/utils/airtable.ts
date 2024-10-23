@@ -18,7 +18,6 @@ export async function getProjects() {
     })
     .all();
 
-  console.log("record", records[0]);
   return (
     records
       .map((m) => m.fields)
