@@ -1,8 +1,11 @@
 import Image from "next/image";
-import { redirect } from "next/navigation";
 import React from "react";
 import Input from "../components/Input";
 import Link from "next/link";
+import { loginStudent } from "../utils/airtable";
+import { cookies } from "next/headers";
+import { revalidatePath } from "next/cache";
+import Button from "../components/Button";
 
 const LoginPage = () => {
   async function loginUser(formData: FormData) {
@@ -11,9 +14,18 @@ const LoginPage = () => {
     const email = formData.get("email");
     const password = formData.get("password");
 
-    console.log(email, password);
-    redirect("/hub");
+    const id = await loginStudent(email as string, password as string);
+    if (id) {
+      const cookieStore = await cookies();
+      cookieStore.set({
+        name: "id",
+        value: id as string,
+        maxAge: 604800,
+      });
+      revalidatePath("/login");
+    }
   }
+
   return (
     <main className='h-dvh w-full bg-neutral-950 flex font-[family-name:var(--font-body)]'>
       <div className='lg:grid lg:min-h-screen lg:grid-cols-12 w-full'>
@@ -68,6 +80,8 @@ const LoginPage = () => {
                 name='email'
                 inputMode='email'
                 type='email'
+                pattern='^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$'
+                required
               />
             </div>
             <div className='mb-2'>
@@ -76,12 +90,11 @@ const LoginPage = () => {
                 id='password'
                 name='password'
                 type='password'
+                required
               />
             </div>
             <div>
-              <button className='inline-flex rounded-full border border-solid border-transparent transition-colors items-center justify-center bg-[#ededed] text-[#0a0a0a] gap-2 hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'>
-                Sign in
-              </button>
+              <Button text='Sign in' pendingText='Signing in' />
             </div>
           </form>
         </section>

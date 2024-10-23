@@ -34,3 +34,26 @@ export async function getProjects() {
       })) as WeekCardProps[]
   );
 }
+
+export async function loginStudent(email: string, studentId: string) {
+  const records = await mainBase("#BuildAlong Students")
+    .select({
+      maxRecords: 15,
+      fields: ["Id", "Email", "Student id"],
+    })
+    .all();
+
+  const targetStudent = records
+    .map((r) => r.fields)
+    .map((r) => ({
+      email: r["Email"],
+      studentId: r["Student id"],
+      id: r["Id"],
+    }))
+    .find((r) => r.email === email && r.studentId === studentId);
+
+  if (targetStudent) {
+    return targetStudent.id;
+  }
+  return false;
+}
