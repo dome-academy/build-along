@@ -4,8 +4,8 @@ import Input from "../components/Input";
 import Link from "next/link";
 import { loginStudent } from "../utils/airtable";
 import { cookies } from "next/headers";
-import { revalidatePath } from "next/cache";
 import Button from "../components/Button";
+import { redirect } from "next/navigation";
 
 const LoginPage = () => {
   async function loginUser(formData: FormData) {
@@ -22,12 +22,12 @@ const LoginPage = () => {
         value: id as string,
         maxAge: 604800,
       });
-      revalidatePath("/login");
+      redirect("/hub");
     }
   }
 
   return (
-    <main className='h-dvh w-full bg-neutral-950 flex font-[family-name:var(--font-body)]'>
+    <main className='h-dvh w-full bg-neutral-950 grid-background flex font-[family-name:var(--font-body)]'>
       <div className='lg:grid lg:min-h-screen lg:grid-cols-12 w-full'>
         <section className='relative flex h-44 items-end bg-gray-900 lg:col-span-5 lg:h-full'>
           <div className='hidden lg:block lg:absolute inset-0 bg-black/30 z-20' />
@@ -70,8 +70,9 @@ const LoginPage = () => {
 
         <section className='flex flex-col justify-center lg:col-span-7 lg:px-16 lg:py-12 px-8 pt-10'>
           <form action={loginUser} className='grid max-w-md lg:ml-9 gap-y-6'>
-            <h2 className='mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl font-[family-name:var(--font-display)]'>
-              Sign in to #BuildAlong
+            <h2 className='mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl font-[family-name:var(--font-display)] uppercase'>
+              Sign in to{" "}
+              <span className='uppercase text-yellow-500'>#BuildAlong</span>
             </h2>
             <div className='mb-2'>
               <Input

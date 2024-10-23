@@ -1,18 +1,13 @@
-import CountdownTimer from "./components/CountdownTimer";
+import Link from "next/link";
 import Footer from "./components/Footer";
 import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
-import Agenda from "./pageBundles/Agenda";
-import Details from "./pageBundles/Details";
-import Facilitators from "./pageBundles/Facilitators";
-import Faqs from "./pageBundles/Faqs";
-import Register from "./pageBundles/Register";
 
 export default function Home() {
   return (
     <>
-      <div className='grid grid-rows-[20px_1fr_20px] relative items-center justify-items-center min-h-dvh p-8 gap-16 sm:pb-0 font-[family-name:var(--font-body)] bg-bg bg-cover bg-center overflow-x-hidden'>
-        <div className='absolute w-full inset-0 bg-black/55 z-10' />
+      <div className='grid grid-rows-[20px_1fr_20px] relative items-center justify-items-center min-h-dvh p-8 gap-16 sm:pb-0 font-[family-name:var(--font-body)] bg-bg bg-cover bg-center overflow-x-hidden grid-background'>
+        {/* <div className='absolute w-full inset-0 bg-black/55 z-10' /> */}
         <Navbar />
         <header className='flex flex-col gap-8 row-start-2 items-center max-w-3xl text-white z-20'>
           <div className='flex gap-x-6 items-center -my-3 md:text-lg font-bold uppercase'>
@@ -33,8 +28,8 @@ export default function Home() {
             </svg>
             <p>Virtual</p>
           </div>
-          <h1 className='text-3xl sm:text-7xl font-semibold uppercase text-center font-[family-name:var(--font-display)] text-yellow-400/80'>
-            #BuildAlong
+          <h1 className='text-3xl sm:text-7xl font-semibold uppercase text-center font-[family-name:var(--font-display)] text-yellow-500'>
+            #BuildAlong W'24
           </h1>
           <p className='sm:text-lg text-center font-normal'>
             An 8 weeks virtual workshop for budding web developers, build
@@ -42,18 +37,23 @@ export default function Home() {
             learners
           </p>
 
+          <p className='flex gap-x-2 text-green-400 animate-pulse text-sm items-center font-semibold uppercase'>
+            <span className='w-3 h-3 rounded-full bg-green-400' />{" "}
+            <span>Ongoing</span>
+          </p>
+
           <div className='flex gap-4 items-center flex-col sm:flex-row sm:justify-center sm:w-full'>
-            <a
+            <Link
               className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-[#ededed] text-[#0a0a0a] gap-2 hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-              href='#details'
+              href='/login'
             >
-              Learn more
-            </a>
+              Go to the Hub
+            </Link>
             <a
               className='rounded-full border border-solid border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
               href='#register'
             >
-              Register now
+              Join Waitlist for S'25
             </a>
           </div>
         </header>
@@ -68,12 +68,12 @@ export default function Home() {
           />
         </footer>
       </div>
-      <Details />
+      {/* <Details />
       <CountdownTimer />
       <Facilitators />
       <Agenda />
       <Faqs />
-      <Register />
+      <Register /> */}
       <Footer />
     </>
   );

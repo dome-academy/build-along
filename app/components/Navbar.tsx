@@ -12,7 +12,7 @@ const Navbar = () => {
           #BuildAlong
         </Link>
         <ul className='hidden md:flex gap-x-6 items-center md:gap-x-12'>
-          <li className='capitalize'>
+          {/* <li className='capitalize'>
             <a href='#details'>about</a>
           </li>
           <li className='capitalize'>
@@ -23,14 +23,14 @@ const Navbar = () => {
           </li>
           <li className='capitalize'>
             <a href='#faqs'>faqs</a>
-          </li>
+          </li> */}
         </ul>
-        <a
-          className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-black text-white gap-2 hover:bg-white hover:text-black text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-          href='#register'
+        <Link
+          className='rounded-full border border-solid border-white/[.145] transition-colors flex items-center justify-center  bg-transparent text-white gap-2 hover:bg-white hover:text-black text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
+          href='/login'
         >
-          Register now
-        </a>
+          Go to Hub
+        </Link>
       </div>
     </nav>
   );
