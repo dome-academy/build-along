@@ -2,6 +2,7 @@ import Airtable from "airtable";
 import { AIRTABLE_BASE, AIRTABLE_KEY } from "./config";
 import { WeekCardProps } from "../components/WeekCard";
 import { isPast } from "./time";
+import { cookies } from "next/headers";
 
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
@@ -56,4 +57,27 @@ export async function loginStudent(email: string, studentId: string) {
     return targetStudent.id;
   }
   return false;
+}
+
+export async function getCurrentStudentDetails() {
+  const id = cookies().get("id")?.value;
+  if (id) {
+    try {
+      const record = (await mainBase("#BuildAlong Students").find(id)).fields;
+      const studentData = {
+        studentId: record["Student id"],
+        name: record.Name,
+        username:
+          (record.Name as string).toLowerCase() +
+          "-" +
+          (record["Last name"] as string).toLowerCase(),
+        team: (record["Team name"] as string[])[0],
+        email: record.Email,
+        id: record.Id,
+      };
+      return studentData;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }

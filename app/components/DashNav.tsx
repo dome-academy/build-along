@@ -17,8 +17,13 @@ const DashNav = () => {
             </Link>
           </li>
           <li>
-            <Link href='#' className='hover:text-yellow-400'>
+            <Link href='/hub/teams' className='hover:text-yellow-400'>
               Teams
+            </Link>
+          </li>
+          <li>
+            <Link href='/hub/my-profile' className='hover:text-yellow-400'>
+              Profile
             </Link>
           </li>
         </ul>
