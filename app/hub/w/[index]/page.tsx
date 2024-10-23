@@ -2,12 +2,7 @@ import { getProjects } from "@/app/utils/airtable";
 import Link from "next/link";
 import React from "react";
 
-const Week = async ({
-  params: { index },
-}: {
-  children: React.ReactNode;
-  params: { index: number };
-}) => {
+const Week = async ({ params: { index } }: { params: { index: number } }) => {
   const weekList = await getProjects();
   const week = weekList.find((w) => w.weekNumber == index);
 

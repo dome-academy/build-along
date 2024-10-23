@@ -7,13 +7,11 @@ import {
 } from "@/app/utils/airtable";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import React from "react";
 
 const SubmitProjectPage = async ({
   params: { index },
 }: {
-  children: React.ReactNode;
   params: { index: number };
 }) => {
   const weekList = await getProjects();
@@ -29,7 +27,7 @@ const SubmitProjectPage = async ({
     const projectLink = formData.get("projectLink") as string;
     const githubLink = formData.get("githubLink") as string | undefined;
 
-    await submitWeekProject(week?.id!, projectLink, githubLink);
+    await submitWeekProject(week?.id || "", projectLink, githubLink);
     revalidatePath(`/hub/w/${index}/submit`);
   }
 

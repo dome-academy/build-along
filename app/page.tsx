@@ -29,7 +29,7 @@ export default function Home() {
             <p>Virtual</p>
           </div>
           <h1 className='text-3xl sm:text-7xl font-semibold uppercase text-center font-[family-name:var(--font-display)] text-yellow-500'>
-            #BuildAlong W'24
+            #BuildAlong W&apos;24
           </h1>
           <p className='sm:text-lg text-center font-normal'>
             An 8 weeks virtual workshop for budding web developers, build
@@ -53,7 +53,7 @@ export default function Home() {
               className='rounded-full border border-solid border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
               href='#register'
             >
-              Join Waitlist for S'25
+              Join Waitlist for S&apos;25
             </a>
           </div>
         </header>

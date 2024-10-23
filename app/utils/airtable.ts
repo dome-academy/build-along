@@ -106,7 +106,9 @@ export async function getProjectSubmissionByCurrentStudent(project: number) {
         .map((r) => ({
           id: r.Id,
           student: (r.Student as string[])[0] as string,
-          projectNumber: (r["Project Week"] as any[])[0] as number,
+          projectNumber: (
+            r["Project Week"] as unknown as number[]
+          )[0] as number,
         }))
         .find((ps) => ps.projectNumber === project && ps.student === studentId);
     } catch (error) {
