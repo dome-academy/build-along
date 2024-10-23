@@ -15,7 +15,15 @@ export async function getProjects() {
   const records = await mainBase("Weekly Projects")
     .select({
       maxRecords: 8,
-      fields: ["Index", "Name", "Description", "Start", "End", "Image"],
+      fields: [
+        "Index",
+        "Name",
+        "Description",
+        "Start",
+        "End",
+        "Image",
+        "Has GitHub",
+      ],
     })
     .all();
 
@@ -32,6 +40,7 @@ export async function getProjects() {
           isPast((m.Start as string) + "T00:00:00") &&
           !isPast(m.End + "T23:59:59"),
         image: m.Image as string,
+        hasGitHub: m["Has GitHub"],
       })) as WeekCardProps[]
   );
 }

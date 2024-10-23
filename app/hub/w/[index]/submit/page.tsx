@@ -29,9 +29,25 @@ const SubmitProjectPage = async ({
           name='projectLink'
           id='projectLink'
           inputMode='url'
+          pattern='^(https?:\/\/)?([\da-z\.-]+\.[a-z\.]{2,6})([\/\w \.-]*)*\/?$'
           placeholder='Paste project link here...'
+          required
+          type='url'
         />
       </div>
+      {week?.hasGitHub ? (
+        <div>
+          <Input
+            label='Link to GitHub repo'
+            name='githubLink'
+            id='githubLink'
+            inputMode='url'
+            placeholder='Paste github link here...'
+            required
+            type='url'
+          />
+        </div>
+      ) : null}
       <div className='mt-4'>
         <button
           type='submit'
