@@ -142,3 +142,50 @@ export async function submitWeekProject(
     }
   }
 }
+
+export async function submitWeeklyUpdate(projectId: string, update: string) {
+  const studentId = cookies().get("id")?.value;
+  if (studentId) {
+    try {
+      await mainBase("Capstone Submissions").create([
+        {
+          fields: {
+            Update: update,
+            Student: [studentId],
+            Project: [projectId],
+          },
+        },
+      ]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+export async function getCapUpdateByCurrentStudent(project: number) {
+  const studentId = cookies().get("id")?.value;
+  if (studentId) {
+    try {
+      const records = await mainBase("Capstone Submissions")
+        .select({
+          maxRecords: 100,
+          fields: ["Id", "Update", "Project Index", "Student"],
+        })
+        .all();
+
+      return records
+        .map((r) => r.fields)
+        .map((r) => ({
+          id: r.Id,
+          update: r.update as string,
+          student: (r.Student as string[])[0] as string,
+          projectNumber: (
+            r["Project Index"] as unknown as number[]
+          )[0] as number,
+        }))
+        .find((ps) => ps.projectNumber === project && ps.student === studentId);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
