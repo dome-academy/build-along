@@ -24,6 +24,7 @@ export async function getProjects() {
         "End",
         "Image",
         "Has GitHub",
+        "Capstone instruction",
       ],
     })
     .all();
@@ -43,6 +44,7 @@ export async function getProjects() {
           !isPast(m.End + "T23:59:59"),
         image: m.Image as string,
         hasGitHub: m["Has GitHub"],
+        capDescription: m["Capstone instruction"],
       })) as WeekCardProps[]
   );
 }

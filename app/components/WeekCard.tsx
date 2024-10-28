@@ -10,6 +10,7 @@ export interface WeekCardProps {
   isCurrent: boolean;
   image: string;
   hasGitHub?: boolean;
+  capDescription: string;
 }
 
 const WeekCard: FC<WeekCardProps> = ({
