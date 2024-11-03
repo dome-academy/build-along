@@ -39,9 +39,8 @@ export async function getProjects() {
         title: m.Name as string,
         description: m.Description as string,
         weekNumber: m.Index as number,
-        isCurrent:
-          isPast((m.Start as string) + "T00:00:00") &&
-          !isPast(m.End + "T23:59:59"),
+        isCurrent: isPast((m.Start as string) + "T00:00:00"),
+        /*!isPast(m.End + "T23:59:59")*/
         image: m.Image as string,
         hasGitHub: m["Has GitHub"],
         capDescription: m["Capstone instruction"],
