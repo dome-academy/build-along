@@ -42,6 +42,12 @@ const HubPage = async () => {
           <WeekCard key={w.weekNumber} {...w} />
         ))}
       </section>
+      <Link
+        className='fixed right-10 bottom-10 z-20 bg-neutral-900  rounded-full border border-solid border-white transition-colors flex items-center justify-center hover:bg-[#1a1a1a] hover:border-primary text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
+        href='hub/guides'
+      >
+        Quick Guides
+      </Link>
     </main>
   );
 };
