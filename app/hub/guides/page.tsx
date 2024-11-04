@@ -11,7 +11,7 @@ const guides = [
   {
     title: "How to install Visual Studio code on your computer",
     tags: ["VScode", "Installation"],
-    videoURl: "https://www.youtube.com/embed/64pfUHPE1sY?si=W8mYibCy5L8Vi0rd",
+    videoURl: "https://www.youtube.com/embed/GzndMw_Gtqc?si=3a2h8KnVATU-ch6W",
   },
   {
     title: "5 essentail VScode extensions you must install for #BuildAlong",
