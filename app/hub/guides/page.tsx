@@ -36,7 +36,7 @@ const guides = [
   },
   {
     title: "How to deploy your website online using Netlify",
-    tags: ["Git", "GitHub"],
+    tags: ["Git", "GitHub", "Netlify", "Hosting"],
     videoURl: "",
   },
 ];
