@@ -6,12 +6,12 @@ const guides = [
   {
     title: "How to setup #BuildAlong extension on your browser",
     tags: ["Browser", "#BuildAlong"],
-    videoURl: "https://www.youtube.com/embed/JgOs70Y7jew?si=N9YiJJ00DINDn64E",
+    videoURl: "https://www.youtube.com/embed/64pfUHPE1sY?si=X4TACa4LBsLz2roq",
   },
   {
     title: "How to install Visual Studio code on your computer",
     tags: ["VScode", "Installation"],
-    videoURl: "",
+    videoURl: "https://www.youtube.com/embed/64pfUHPE1sY?si=W8mYibCy5L8Vi0rd",
   },
   {
     title: "5 essentail VScode extensions you must install for #BuildAlong",
