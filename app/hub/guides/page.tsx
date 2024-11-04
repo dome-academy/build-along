@@ -16,17 +16,18 @@ const guides = [
   {
     title: "5 essentail VScode extensions you must install for #BuildAlong",
     tags: ["VScode", "Installation", "#BuildAlong"],
-    videoURl: "",
+    videoURl: "https://www.youtube.com/embed/iYkLrXobBbA?si=q8oIkgFx_LopWjUq",
   },
   {
-    title: "How to create an account on GitHub in less than 5 minutes",
+    title: "How to create an account on GitHub in less than 2 minutes",
     tags: ["Git", "GitHub"],
-    videoURl: "",
+    videoURl: "https://www.youtube.com/embed/Gn3w1UvTx0A?si=sIx95UoqDrO2QsqL",
   },
   {
-    title: "How to create a local git repository on your project",
+    title:
+      "How to create a install git on your computer in less than 2 minutes",
     tags: ["Git", "GitHub"],
-    videoURl: "",
+    videoURl: "https://www.youtube.com/embed/iYkLrXobBbA?si=OVL3bbh8imCHVzId",
   },
   {
     title: "How to upload your code to GitHub from VScode using git",
