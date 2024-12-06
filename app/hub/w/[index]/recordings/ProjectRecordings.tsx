@@ -1,5 +1,6 @@
 "use client";
-import React, { FC } from "react";
+import LightBox from "@/app/components/LightBox";
+import React, { FC, useState } from "react";
 
 interface ProjectRecordingsProps {
   index: number;
@@ -14,11 +15,29 @@ const ProjectRecordings: FC<ProjectRecordingsProps> = ({
   wed,
   fri,
 }) => {
-  console.log(mon, wed, fri);
+  const [open, setOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState<string>();
+
+  const handleOpen = (video: string) => {
+    setCurrentVideo(video);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setCurrentVideo(undefined);
+    setOpen(false);
+  };
+
   return (
     <div className='grid mt-8 gap-y-3'>
+      <LightBox
+        onClose={handleClose}
+        open={open}
+        videoUrl={currentVideo || ""}
+      />
       <button
         tabIndex={1}
+        onClick={() => handleOpen(mon)}
         className='p-4 border-2 rounded-md flex justify-between items-center hover:shadow-[0_0_15px_var(--tw-shadow-color)] hover:shadow-primary hover:border-fuchsia-300 focus:shadow-[0_0_15px_var(--tw-shadow-color)] focus:shadow-primary focus:border-fuchsia-300 transition-shadow group focus-within:outline-none'
       >
         <h4 className='md:text-lg group-hover:text-fuchsia-400 group-hover:brightness-150 group-focus:text-fuchsia-400'>
@@ -38,6 +57,7 @@ const ProjectRecordings: FC<ProjectRecordingsProps> = ({
 
       <button
         tabIndex={2}
+        onClick={() => handleOpen(wed)}
         className='p-4 border-2 rounded-md flex justify-between items-center hover:shadow-[0_0_15px_var(--tw-shadow-color)] hover:shadow-primary hover:border-fuchsia-300 focus:shadow-[0_0_15px_var(--tw-shadow-color)] focus:shadow-primary focus:border-fuchsia-300 transition-shadow group focus-within:outline-none'
       >
         <h4 className='md:text-lg group-hover:text-fuchsia-400 group-hover:brightness-150 group-focus:text-fuchsia-400'>
@@ -57,6 +77,7 @@ const ProjectRecordings: FC<ProjectRecordingsProps> = ({
 
       <button
         tabIndex={3}
+        onClick={() => handleOpen(fri)}
         className='p-4 border-2 rounded-md flex justify-between items-center hover:shadow-[0_0_15px_var(--tw-shadow-color)] hover:shadow-primary hover:border-fuchsia-300 focus:shadow-[0_0_15px_var(--tw-shadow-color)] focus:shadow-primary focus:border-fuchsia-300 transition-shadow group focus-within:outline-none'
       >
         <h4 className='md:text-lg group-hover:text-fuchsia-400 group-hover:brightness-150 group-focus:text-fuchsia-400'>
