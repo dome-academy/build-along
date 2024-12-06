@@ -30,7 +30,7 @@ const Week = async ({ params: { index } }: { params: { index: number } }) => {
               href={`/hub/w/${week.weekNumber}/recordings`}
               className='bg-primary font-medium rounded-full border border-solid border-transparent h-10 sm:h-12 px-4 sm:px-5 inline-flex justify-center items-center gap-x-2 hover:text-yellow-300'
             >
-              <span>View recordings</span>
+              <span>Watch recordings</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='24'
