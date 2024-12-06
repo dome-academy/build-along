@@ -188,3 +188,34 @@ export async function getCapUpdateByCurrentStudent(project: number) {
     }
   }
 }
+
+export async function getProjectRecordings(project: number) {
+  const records = await mainBase("Weekly Projects")
+    .select({
+      maxRecords: 8,
+      fields: [
+        "Id",
+        "Monday Video",
+        "Wednesday Video",
+        "Friday Video",
+        "Index",
+      ],
+    })
+    .all();
+
+  const targetProject = records
+    .map((r) => r.fields)
+    .find((rf) => rf["Index"] === Number(project));
+  if (targetProject) {
+    return {
+      mon: targetProject["Monday Video"] as string,
+      wed: targetProject["Wednesday Video"] as string,
+      fri: targetProject["Friday Video"] as string,
+    };
+  }
+  return {
+    mon: "",
+    wed: "",
+    fri: "",
+  };
+}
