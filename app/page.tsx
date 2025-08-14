@@ -51,7 +51,7 @@ export default function Home() {
             </Link>
             <a
               className='rounded-full border border-solid border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
-              href='https://domeintiative.com/build-along'
+              href='https://domeinitiative.com/build-along'
               target='_blank'
             >
               Join BuildAlong W&apos;25
